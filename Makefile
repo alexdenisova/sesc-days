@@ -1,9 +1,7 @@
-PROGRAM= area
+run: days
+	./days
 
-run: ${PROGRAM}
-    ./${PROGRAM}
+days: days.c
+	gcc -Wall -std=c11 days.c -o days
 
-${PROGRAM}: ${PROGRAM}.c
-    gcc -Wall -std=c11 ${PROGRAM}.c -o ${PROGRAM}
-
-build: ${PROGRAM}
+build: days
